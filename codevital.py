@@ -2,6 +2,7 @@
 CodeVital — The Complete Health Check for Any Codebase
 Scan any project folder and get a comprehensive diagnostic report:
 dependencies, security, structure, quality, and an overall health score.
+by adithyakiranhere
 """
 
 import argparse
