@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CodeVital — git-gossip</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05050a;--s:#0c0c18;--s2:#14142a;--b:#222244;--t:#e0e0f0;--d:#555580;--a:#7c3aed;--a2:#06b6d4;--g:#22c55e;--r:#ef4444;--y:#eab308;--m:#d946ef}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--t);font-family:'Instrument Sans',sans-serif;padding:2rem;max-width:960px;margin:0 auto;line-height:1.6}
+.hero{text-align:center;padding:2.5rem 1rem;border-bottom:1px solid var(--b);margin-bottom:2rem}
+.hero h1{font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,var(--a),var(--m),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .pname{font-family:'IBM Plex Mono',monospace;color:var(--a2);font-size:1.1rem;margin:.5rem 0}
+.hero .meta{color:var(--d);font-size:.85rem}
+.grade-ring{display:inline-flex;align-items:center;justify-content:center;width:90px;height:90px;border-radius:50%;border:4px solid;font-family:'IBM Plex Mono',monospace;font-size:2.2rem;font-weight:700;margin:1rem}
+.grade-ring.good{border-color:var(--g);color:var(--g)}
+.grade-ring.warn{border-color:var(--y);color:var(--y)}
+.grade-ring.bad{border-color:var(--r);color:var(--r)}
+.scores{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1.5rem 0}
+.score-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:1rem;text-align:center}
+.score-card .num{font-family:'IBM Plex Mono',monospace;font-size:1.6rem;font-weight:700}
+.score-card .lbl{font-size:.7rem;color:var(--d);text-transform:uppercase;letter-spacing:1px;margin-top:.3rem}
+.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:1.3rem;margin-bottom:1rem}
+.card h3{font-size:1rem;font-weight:700;margin-bottom:.8rem}
+.lang-track{display:flex;height:10px;border-radius:5px;overflow:hidden;gap:2px;margin:.8rem 0}
+.lang-bar{border-radius:3px;min-width:8px;transition:width .5s}
+.lang-legend{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
+.lang-tag{font-size:.75rem;display:flex;align-items:center;gap:.3rem}
+.lang-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+.kv{display:flex;justify-content:space-between;padding:.35rem .6rem;background:var(--s2);border-radius:6px;font-size:.85rem}
+.kv span:first-child{color:var(--d)}.kv span:last-child{font-family:'IBM Plex Mono',monospace;font-weight:600}
+.check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
+.check-item{padding:.4rem .6rem;background:var(--s2);border-radius:6px;font-size:.82rem}
+.check-item.pass{border-left:3px solid var(--g)}.check-item.fail{border-left:3px solid var(--r)}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+thead th{text-align:left;padding:.5rem;border-bottom:2px solid var(--b);color:var(--d);font-size:.72rem;text-transform:uppercase;letter-spacing:.5px}
+tbody td{padding:.4rem .5rem;border-bottom:1px solid var(--b);font-family:'IBM Plex Mono',monospace;font-size:.78rem}
+.sev-critical{color:var(--r);font-weight:700}.sev-high{color:#f97316}.sev-medium{color:var(--y)}.sev-low,.sev-info{color:var(--d)}
+.dim{color:var(--d);font-family:'Instrument Sans',sans-serif}
+.all-clear{color:var(--g);font-size:1rem;text-align:center;padding:1rem}
+.rec-item{padding:.5rem .7rem;margin:.3rem 0;background:var(--s2);border-radius:6px;border-left:3px solid var(--a);font-size:.85rem}
+.good{color:var(--g)}.warn{color:var(--y)}.bad{color:var(--r)}
+footer{text-align:center;padding:2rem;color:var(--d);font-size:.8rem;border-top:1px solid var(--b);margin-top:2rem}
+footer a{color:var(--a);text-decoration:none}
+@media(max-width:600px){.scores{grid-template-columns:1fr 1fr}.check-grid{grid-template-columns:1fr 1fr}.kv-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>🏥 CodeVital</h1>
+<div class="pname">git-gossip</div>
+<div class="grade-ring bad">D</div>
+<div class="meta">53/100 · Scanned 2026-04-25T15:42:56</div>
+</div>
+<div class="scores">
+<div class="score-card"><div class="num warn">60</div><div class="lbl">📁 Structure</div></div>
+<div class="score-card"><div class="num bad">5</div><div class="lbl">✨ Quality</div></div>
+<div class="score-card"><div class="num good">85</div><div class="lbl">🛡️ Security</div></div>
+<div class="score-card"><div class="num warn">75</div><div class="lbl">📦 Deps</div></div>
+</div>
+<div class="card"><h3>📁 Overview</h3>
+<div class="kv-grid">
+<div class="kv"><span>Files</span><span>5</span></div>
+<div class="kv"><span>Lines</span><span>1,850</span></div>
+<div class="kv"><span>Size</span><span>71.1 KB</span></div>
+<div class="kv"><span>Frameworks</span><span>—</span></div>
+</div></div>
+<div class="card"><h3>💻 Languages</h3>
+<div class="lang-track"><div class="lang-bar" style="width:63.49378042184964%;background:#7c3aed" title="Python: 63.5%"></div><div class="lang-bar" style="width:28.66414277988102%;background:#06b6d4" title="HTML: 28.7%"></div><div class="lang-bar" style="width:7.842076798269335%;background:#22c55e" title="Markdown: 7.8%"></div></div>
+<div class="lang-legend"><span class="lang-tag"><span class="lang-dot" style="background:#7c3aed"></span>Python 63%</span><span class="lang-tag"><span class="lang-dot" style="background:#06b6d4"></span>HTML 29%</span><span class="lang-tag"><span class="lang-dot" style="background:#22c55e"></span>Markdown 8%</span></div></div>
+<div class="card"><h3>✅ Quality Checklist</h3>
+<div class="check-grid"><div class="check-item pass">✅ README</div><div class="check-item fail">❌ LICENSE</div><div class="check-item pass">✅ .gitignore</div><div class="check-item fail">❌ CI/CD</div><div class="check-item fail">❌ Tests</div><div class="check-item fail">❌ Linter</div><div class="check-item fail">❌ Formatter</div><div class="check-item fail">❌ Type Checking</div><div class="check-item fail">❌ Docker</div><div class="check-item fail">❌ .env.example</div><div class="check-item fail">❌ CONTRIBUTING</div><div class="check-item fail">❌ CHANGELOG</div></div></div>
+<div class="card"><h3>🛡️ Security</h3><table><thead><tr><th>Severity</th><th>Category</th><th>Message</th><th>Location</th></tr></thead><tbody><tr><td class="sev-high">HIGH</td><td>Missing Gitignore Rule</td><td>.env is NOT listed in .gitignore — secrets may be committed</td><td class="dim">.gitignore</td></tr></tbody></table></div>
+<div class='card'><h3>💡 Recommendations</h3><div class="rec-item">→ Add a LICENSE file</div><div class="rec-item">→ Add tests</div><div class="rec-item">→ Set up CI/CD</div><div class="rec-item">→ Add a dependency lockfile</div></div>
+<footer>Generated by <a href="https://github.com/YOUR_USERNAME/codevital">codevital</a> — the complete health check for any codebase</footer>
+</body></html>
