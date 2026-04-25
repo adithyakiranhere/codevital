@@ -61,7 +61,7 @@ Add `--html report.html` for a gorgeous dark-themed visual report you can share 
 ## Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/codevital.git
+git clone https://github.com/adithyakiranhere/codevital.git
 cd codevital
 pip install -r requirements.txt
 ```
