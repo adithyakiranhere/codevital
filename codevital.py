@@ -25,7 +25,7 @@ IGNORE_DIRS = {
     "env", ".env", "dist", "build", "target", ".next", ".nuxt", "out",
     ".idea", ".vscode", ".mypy_cache", ".pytest_cache", ".tox",
     "vendor", "bower_components", ".gradle", ".cargo", "coverage",
-    "egg-info", ".eggs", "site-packages",
+    "egg-info", ".eggs", "site-packages",".vim"
 }
 
 IGNORE_FILES = {
